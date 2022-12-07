@@ -66,6 +66,7 @@ else {
     for (let i = 0; i < infojson.album.tracks.track.length; i++){
         let linkmusica = document.createElement("a");
         linkmusica.setAttribute("href", infojson.album.tracks.track[i].url)
+        linkmusica.setAttribute("id","linkmusica");
         linkmusica.innerHTML = infojson.album.tracks.track[i].url
         let duracaom = parseInt(infojson.album.tracks.track[i].duration / 60);
         let duracaos = parseInt(infojson.album.tracks.track[i].duration % 60);
@@ -82,7 +83,8 @@ else {
 else {
         let linkmusica = document.createElement("a");
         linkmusica.setAttribute("href", infojson.album.tracks.track.url)
-        linkmusica.innerHTML = infojson.album.tracks.track.url
+        linkmusica.setAttribute("id","linkmusica");
+        linkmusica.innerHTML = infojson.album.tracks.track.url;       
         let duracaom = parseInt(infojson.album.tracks.track.duration / 60);
         let duracaos = parseInt(infojson.album.tracks.track.duration % 60);  
         musicas.innerHTML += "<span>" + infojson.album.tracks.track.name + "</span><br>Duração: " + 
