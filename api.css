@@ -28,10 +28,10 @@ main{
     column-gap: 40px;
     display:none;
     grid-template-columns: 26vw 26vw;
-    grid-template-rows: 250px 170px;
+    grid-template-rows: auto 170px;
     grid-template-areas:
     "album image"
-    "basicinfo ."
+    "basicinfo basicinfo"
     "musicas musicas"
 }
 #instrucao{
@@ -87,6 +87,9 @@ input{
     border: 1.6px solid black;
 
 }
+a{
+    word-break:break-all;
+}
 
 figcaption{
   font-size: 17px;
@@ -97,4 +100,37 @@ figcaption{
 #artistaelink{
     line-height:19px;
     margin-top: 22px;
+}
+
+@media (max-width: 1000px){
+    #container{
+        justify-content: space-evenly;
+        grid-template-rows: auto;
+        column-gap:0px;
+        row-gap: 30px;
+    }
+    img{
+    width:250px;
+    height:250px;
+    }
+    a{
+        font-size:0.95rem;
+    }
+    input{
+        width:150px;
+    }
+}
+@media (max-width: 720px){
+    #container{
+        row-gap: 30px;
+        column-gap: 0;
+        grid-template-areas:
+        "album album"
+        "image image"
+        "basicinfo basicinfo"
+        "musicas musicas"
+    }
+    #linkmusica{
+        font-size: 0.9rem;
+    }
 }
