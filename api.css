@@ -51,7 +51,7 @@ main{
 
 #basicInfo{
     grid-area: basicinfo;
-    font-size:1.2rem;
+    font-size:1.24rem;
     line-height: 2.7rem;
 }
 #musicas{
