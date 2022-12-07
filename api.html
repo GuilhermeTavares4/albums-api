@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./api.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="pesquisa">
+            <label for="procuraarstista">Nome do artista:</label>
+            <input type="text" id="procuraartista"><br>
+            <label for="procuraalbum">Nome do álbum:</label>
+            <input type="text" id="procuraalbum"><br>
+            <button id="procura">Buscar</button>
+        </div>
+    </header>
+    <main>
+        <div id="instrucao">Pesquise um álbum para obter informações sobre ele</div>
+    <div id="container">
+        <div id="album"></div>
+        <div id="basicInfo"></div>
+        <figure id="figura"><img id="image" alt="capa do álbum"></img>
+           <a id="link"><figcaption id="linkalbum"></figcaption></a>
+        </figure>
+        <div id="musicas"></div>
+    </div>
+</main>
+    <script src="api.js"></script>
+</body>
+</html>
