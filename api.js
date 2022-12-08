@@ -1,5 +1,4 @@
 let album = document.querySelector("#album");
-let image = document.querySelector("#image");
 let musicas = document.querySelector("#musicas");
 let basicinfo = document.querySelector("#basicInfo");
 let url, resposta, infojson; 
@@ -16,7 +15,7 @@ async function pegainfo(){
         mostrainfo();
     }
     catch{
-        alert("Ocorreu um erro. Verifique se os nomes foram digitados corretamente.");
+        alert("Ocorreu um erro.");
     }
 }  
 function mostrainfo(){
@@ -38,10 +37,14 @@ function mostrainfo(){
      "</span><br>";
      artistaelink.appendChild(linkartista);
     
-    image.src = JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', "");
+    let img = document.createElement("img");
+    img.setAttribute("alt","capa do álbum")
+    img.setAttribute("id","image")
+    img.setAttribute("src",JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', ""));
+    document.querySelector("#linkalbum").before(img);
     document.querySelector("#container").style.display = "grid";
     document.querySelector("#instrucao").style.display = "none";
-    document.querySelector("#linkalbum").innerHTML = infojson.album.url;
+    document.querySelector("#link").innerHTML = infojson.album.url;
     document.querySelector("#link").setAttribute("href", infojson.album.url);
     if (infojson.album.tags != ""){
     if (infojson.album.tags.tag.length >= 3){
