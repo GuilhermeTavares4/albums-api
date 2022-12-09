@@ -37,7 +37,7 @@ function mostrainfo(){
     artistaelink.innerHTML = "</h1>" + "<br> Por: <span>"  + infojson.album.artist +
      "</span><br>";
      artistaelink.appendChild(linkartista);
-    imgage.setAttribute("src",JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', ""));
+    image.setAttribute("src",JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', ""));
     document.querySelector("#container").style.display = "grid";
     document.querySelector("#instrucao").style.display = "none";
     document.querySelector("#link").innerHTML = infojson.album.url;
