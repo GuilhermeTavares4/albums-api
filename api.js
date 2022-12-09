@@ -1,5 +1,6 @@
 let album = document.querySelector("#album");
 let musicas = document.querySelector("#musicas");
+let image = document.querySelector("#image");
 let basicinfo = document.querySelector("#basicInfo");
 let url, resposta, infojson; 
 let procuraart = document.querySelector("#procuraartista");
@@ -36,12 +37,7 @@ function mostrainfo(){
     artistaelink.innerHTML = "</h1>" + "<br> Por: <span>"  + infojson.album.artist +
      "</span><br>";
      artistaelink.appendChild(linkartista);
-    
-    let img = document.createElement("img");
-    img.setAttribute("alt","capa do álbum")
-    img.setAttribute("id","image")
-    img.setAttribute("src",JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', ""));
-    document.querySelector("#linkalbum").before(img);
+    imgage.setAttribute("src",JSON.stringify(infojson.album.image[3]).slice(30).replace('"}', ""));
     document.querySelector("#container").style.display = "grid";
     document.querySelector("#instrucao").style.display = "none";
     document.querySelector("#link").innerHTML = infojson.album.url;
