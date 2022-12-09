@@ -15,7 +15,7 @@ async function pegainfo(){
         mostrainfo();
     }
     catch{
-        alert("Ocorreu um erro.");
+        alert("Ocorreu um erro. Verifique se os nomes foram digitados corretamente.");
     }
 }  
 function mostrainfo(){
